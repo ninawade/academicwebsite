@@ -24,11 +24,11 @@ repository               : "ninawade/academicwebsite"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  name             : "Nina Wade"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
+  bio              : "Project Manager"
+  location         : "Berlin"
+  employer         : "Humboldt University"
   uri              : # URL
   email            : "none@example.org" 
 
