@@ -41,3 +41,13 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
+/* Archive / Research Seite: Titel und Inhalt ausrichten */
+.page-archive .page-title {
+  margin-left: 0; /* Entfernt die Standard-Linkeinstellung */
+  padding-left: 1rem; /* Gleicher Abstand wie der Content darunter */
+}
+
+.page-archive .entry-content {
+  padding-left: 1rem; /* Gleicher Abstand wie Titel */
+}
+
