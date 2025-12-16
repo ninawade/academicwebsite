@@ -41,13 +41,18 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
-/* Desktop: Nina Wade links, Navigation rechts */
+
+/* ==============================
+   Custom Navigation: Titel links, Menüpunkte rechts
+   ============================== */
+
+/* Flex-Container für Header */
 .masthead__inner-wrap {
   display: flex;
   align-items: center;
 }
 
-/* Titel links fixieren */
+/* Titel bleibt links */
 .masthead__inner-wrap .site-title {
   flex-shrink: 0;
 }
@@ -59,8 +64,7 @@
   align-items: center;
 }
 
-/* Abstand zwischen Menüpunkten (optional) */
+/* Optional: Abstand zwischen Menüpunkten */
 .masthead__inner-wrap .greedy-nav .visible-links li {
   margin-left: 1.5rem;
 }
-
