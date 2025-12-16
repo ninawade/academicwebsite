@@ -45,3 +45,18 @@
 .masthead__inner-wrap .greedy-nav {
   justify-content: space-between;
 }
+/* Nina Wade links, Navigation rechts */
+.masthead__inner-wrap .greedy-nav {
+  display: flex;
+  align-items: center;
+}
+
+.masthead__inner-wrap .greedy-nav .site-title {
+  flex-shrink: 0; /* verhindert Zusammenziehen */
+}
+
+.masthead__inner-wrap .greedy-nav .visible-links {
+  display: flex;
+  margin-left: auto; /* schiebt Menüpunkte nach rechts */
+}
+
