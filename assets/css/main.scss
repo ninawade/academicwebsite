@@ -40,7 +40,7 @@
 ;
 
 /* ==============================
-   Header: Nina Wade links, Menü rechts (GreedyNav deaktiviert Desktop)
+   Header: Nina Wade links, Menü rechts
    ============================== */
 
 /* Flex-Container für Header */
@@ -59,13 +59,14 @@
   flex-shrink: 0;
 }
 
-/* Navigation sichtbar rechts auf Desktop */
+/* Navigation rechts auf Desktop */
 .masthead__inner-wrap .greedy-nav {
   display: flex !important;        /* erzwingt Sichtbarkeit */
   margin-left: auto;
+  align-items: center;
 }
 
-/* Die Menüpunkte */
+/* Menüpunkte sichtbar */
 .masthead__inner-wrap .greedy-nav .visible-links {
   display: flex !important;
 }
@@ -82,4 +83,21 @@
   transition: color 0.2s;
 }
 
-.masthead__inner-wrap .greedy-nav .
+.masthead__inner-wrap .greedy-nav .visible-links li a:hover {
+  color: #007acc;
+}
+
+/* Hamburger-Menü auf Desktop ausblenden */
+.masthead__inner-wrap .greedy-nav .hidden-links,
+.masthead__inner-wrap .greedy-nav .greedy-nav__toggle {
+  display: none !important;
+}
+
+/* Mobile: Hamburger-Menü aktiv, Menü unsichtbar */
+@media (max-width: 768px) {
+  .masthead__inner-wrap {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .masthead__inner-wrap .greedy-nav .hidden-links,
