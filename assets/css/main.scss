@@ -3,6 +3,9 @@
 
 /*
  * This file controls what is imported from /_sass
+ *
+ * Note that the files are processed in the order they are imported, so they are partly
+   sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
  */
 
 @import
@@ -38,66 +41,3 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
-
-/* ==============================
-   Header: Nina Wade links, Menü rechts
-   ============================== */
-
-/* Flex-Container für Header */
-.masthead__inner-wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Titel links, größer und fett */
-.masthead__inner-wrap .site-title {
-  font-weight: 600;
-  font-size: 1.25rem;
-  color: #111111;
-  text-decoration: none;
-  flex-shrink: 0;
-}
-
-/* Navigation rechts auf Desktop */
-.masthead__inner-wrap .greedy-nav {
-  display: flex !important;        /* erzwingt Sichtbarkeit */
-  margin-left: auto;
-  align-items: center;
-}
-
-/* Menüpunkte sichtbar */
-.masthead__inner-wrap .greedy-nav .visible-links {
-  display: flex !important;
-}
-
-.masthead__inner-wrap .greedy-nav .visible-links li {
-  list-style: none;
-  margin-left: 2rem;
-}
-
-.masthead__inner-wrap .greedy-nav .visible-links li a {
-  color: #111111;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s;
-}
-
-.masthead__inner-wrap .greedy-nav .visible-links li a:hover {
-  color: #007acc;
-}
-
-/* Hamburger-Menü auf Desktop ausblenden */
-.masthead__inner-wrap .greedy-nav .hidden-links,
-.masthead__inner-wrap .greedy-nav .greedy-nav__toggle {
-  display: none !important;
-}
-
-/* Mobile: Hamburger-Menü aktiv, Menü unsichtbar */
-@media (max-width: 768px) {
-  .masthead__inner-wrap {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .masthead__inner-wrap .greedy-nav .hidden-links,
