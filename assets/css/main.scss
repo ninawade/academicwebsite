@@ -51,4 +51,51 @@
 }
 
 /* Titel und Menüpunkte als inline-flex */
-.masthead__in
+.masthead__inner-wrap .site-title,
+.masthead__inner-wrap .greedy-nav {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 1rem; /* Abstand zwischen Titel und Menü */
+}
+
+/* Menüpunkte im Menü */
+.masthead__inner-wrap .greedy-nav .visible-links {
+  display: flex !important;
+}
+
+.masthead__inner-wrap .greedy-nav .visible-links li {
+  list-style: none;
+  margin-left: 2rem;
+}
+
+.masthead__inner-wrap .greedy-nav .visible-links li a {
+  color: #111111;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.masthead__inner-wrap .greedy-nav .visible-links li a:hover {
+  color: #007acc;
+}
+
+/* Mobile: Hamburger-Menü korrekt */
+@media (max-width: 768px) {
+  .masthead__inner-wrap {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .masthead__inner-wrap .greedy-nav {
+    margin: 0.5rem 0 0 0;
+  }
+
+  .masthead__inner-wrap .greedy-nav .visible-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .masthead__inner-wrap .greedy-nav .visible-links li {
+    margin: 0.5rem 0;
+  }
+}
