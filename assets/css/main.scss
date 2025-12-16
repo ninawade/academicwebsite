@@ -3,9 +3,6 @@
 
 /*
  * This file controls what is imported from /_sass
- *
- * Note that the files are processed in the order they are imported, so they are partly
-   sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
  */
 
 @import
@@ -41,13 +38,17 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
-/* Archive / Research Seite: Titel und Inhalt ausrichten */
-.page-archive .page-title {
-  margin-left: 0; /* Entfernt die Standard-Linkeinstellung */
-  padding-left: 1rem; /* Gleicher Abstand wie der Content darunter */
+
+/* ==============================
+   Navigation zentrieren
+   ============================== */
+
+/* Flex-Container für Header */
+.masthead__inner-wrap {
+  display: flex;
+  justify-content: center; /* zentriert alles horizontal */
+  align-items: center;
 }
 
-.page-archive .entry-content {
-  padding-left: 1rem; /* Gleicher Abstand wie Titel */
-}
-
+/* Titel und Menüpunkte als inline-flex */
+.masthead__in
