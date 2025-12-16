@@ -1,72 +1,44 @@
 ---
-layout: archive
+layout: single
 title: "Research"
 permalink: /research/
 author_profile: true
 ---
 
 ## Working Papers
-======
-Working Paper 1  
-Working Paper 2  
-Working Paper 3  
 
-## Working Papers
+**Title of Working Paper 1**  
+Author Name(s)  
+<em>Status / Journal</em>, Year  
+[PDF](#) · [Abstract](#)
 
-- Working Paper 1  
-- Working Paper 2  
-- Working Paper 3  
+<br>
+
+**Title of Working Paper 2**  
+Author Name(s)  
+<em>Status / Journal</em>, Year  
+[PDF](#)
+
+---
 
 ## Publications
 
-{% include base_path %}
+**Title of Publication 1**  
+Author Name(s)  
+<em>Journal Name</em>, Year  
+[PDF](#) · [Journal](#)
 
-{% if site.publication_category %}
-  {% for category in site.publication_category %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h3>{{ category[1].title }}</h3>
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+<br>
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
+**Title of Publication 2**  
+Author Name(s)  
+<em>Journal Name</em>, Year  
 
-{% include base_path %}
+---
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+## Work in Progress
 
+**Title of Project**  
+with Coauthor Name(s)
 
 
