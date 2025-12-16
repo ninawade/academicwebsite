@@ -41,22 +41,26 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
-/* Title left, menu right – override Minimal Mistakes navigation */
-.masthead__inner-wrap .greedy-nav {
-  justify-content: space-between;
-}
-/* Nina Wade links, Navigation rechts */
-.masthead__inner-wrap .greedy-nav {
+/* Desktop: Nina Wade links, Navigation rechts */
+.masthead__inner-wrap {
   display: flex;
   align-items: center;
 }
 
-.masthead__inner-wrap .greedy-nav .site-title {
-  flex-shrink: 0; /* verhindert Zusammenziehen */
+/* Titel links fixieren */
+.masthead__inner-wrap .site-title {
+  flex-shrink: 0;
 }
 
-.masthead__inner-wrap .greedy-nav .visible-links {
+/* Navigation nach rechts schieben */
+.masthead__inner-wrap .greedy-nav {
+  margin-left: auto;
   display: flex;
-  margin-left: auto; /* schiebt Menüpunkte nach rechts */
+  align-items: center;
+}
+
+/* Abstand zwischen Menüpunkten (optional) */
+.masthead__inner-wrap .greedy-nav .visible-links li {
+  margin-left: 1.5rem;
 }
 
