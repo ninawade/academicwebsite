@@ -7,6 +7,8 @@ redirect_from:
   - /resume
 ---
 
+An updated CV is linked to the menu "CV"
+
 {% include base_path %}
 
 Education
