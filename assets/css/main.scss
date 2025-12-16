@@ -1,10 +1,52 @@
+---
+---
+
+/*
+ * This file controls what is imported from /_sass
+ */
+
+@import
+    "vendor/breakpoint/breakpoint",
+
+    "themes",
+    "theme/{{ site.site_theme | default: 'default' | append: '_light' }}",
+    "theme/{{ site.site_theme | default: 'default' | append: '_dark' }}",
+
+    "include/mixins",
+    "vendor/susy/susy",
+
+    "layout/reset",
+    "layout/base",
+
+    "include/utilities",
+    "layout/tables",
+    "layout/buttons",
+    "layout/notices",
+    "layout/masthead",
+    "layout/navigation",
+    "layout/footer",
+    "syntax",
+
+    "layout/forms",
+
+    "layout/page",
+    "layout/archive",
+    "layout/sidebar",
+    "layout/json_cv",
+
+    "vendor/font-awesome/fontawesome",
+    "vendor/font-awesome/solid",
+    "vendor/font-awesome/brands"
+;
+
 /* ==============================
-   Header: Nina Wade links, Menü rechts
+   Header: Nina Wade links, Menü rechts (GreedyNav deaktiviert Desktop)
    ============================== */
 
+/* Flex-Container für Header */
 .masthead__inner-wrap {
   display: flex;
-  justify-content: space-between; /* Titel links, Menü rechts */
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -14,39 +56,30 @@
   font-size: 1.25rem;
   color: #111111;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
-/* Menü rechts */
-.masthead__inner-wrap nav {
-  display: flex;
+/* Navigation sichtbar rechts auf Desktop */
+.masthead__inner-wrap .greedy-nav {
+  display: flex !important;        /* erzwingt Sichtbarkeit */
+  margin-left: auto;
 }
 
-.masthead__inner-wrap nav ul {
-  display: flex;
+/* Die Menüpunkte */
+.masthead__inner-wrap .greedy-nav .visible-links {
+  display: flex !important;
+}
+
+.masthead__inner-wrap .greedy-nav .visible-links li {
   list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.masthead__inner-wrap nav ul li {
   margin-left: 2rem;
 }
 
-.masthead__inner-wrap nav ul li a {
+.masthead__inner-wrap .greedy-nav .visible-links li a {
   color: #111111;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s;
 }
 
-.masthead__inner-wrap nav ul li a:hover {
-  color: #007acc;
-}
-
-/* Mobile: Hamburger-Menü immer sichtbar, links Name bleibt */
-@media (max-width: 768px) {
-  .masthead__inner-wrap {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
+.masthead__inner-wrap .greedy-nav .
