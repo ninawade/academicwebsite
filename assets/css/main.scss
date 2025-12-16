@@ -41,3 +41,16 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
+/* Align site title left and navigation links right */
+.greedy-nav {
+  display: flex;
+  align-items: center;
+}
+
+.greedy-nav .site-title {
+  margin-right: auto;
+}
+
+.greedy-nav .visible-links {
+  justify-content: flex-end;
+}
