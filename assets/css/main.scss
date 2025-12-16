@@ -41,16 +41,7 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
-/* Site title left, navigation right (AcademicPages / Minimal Mistakes) */
-.greedy-nav {
-  display: flex;
-  align-items: center;
-}
-.greedy-nav .site-title {
-  flex-shrink: 0;
-}
-
-.greedy-nav .visible-links {
-  display: flex;
-  margin-left: auto;
+/* Title left, menu right – override Minimal Mistakes navigation */
+.masthead__inner-wrap .greedy-nav {
+  justify-content: space-between;
 }
