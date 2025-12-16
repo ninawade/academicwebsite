@@ -1,70 +1,52 @@
----
----
-
-/*
- * This file controls what is imported from /_sass
- *
- * Note that the files are processed in the order they are imported, so they are partly
-   sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
- */
-
-@import
-    "vendor/breakpoint/breakpoint",
-
-    "themes",
-    "theme/{{ site.site_theme | default: 'default' | append: '_light' }}",
-    "theme/{{ site.site_theme | default: 'default' | append: '_dark' }}",
-
-    "include/mixins",
-    "vendor/susy/susy",
-
-    "layout/reset",
-    "layout/base",
-
-    "include/utilities",
-    "layout/tables",
-    "layout/buttons",
-    "layout/notices",
-    "layout/masthead",
-    "layout/navigation",
-    "layout/footer",
-    "syntax",
-
-    "layout/forms",
-
-    "layout/page",
-    "layout/archive",
-    "layout/sidebar",
-    "layout/json_cv",
-
-    "vendor/font-awesome/fontawesome",
-    "vendor/font-awesome/solid",
-    "vendor/font-awesome/brands"
-;
-
 /* ==============================
-   Custom Navigation: Titel links, Menüpunkte rechts
+   Header: Nina Wade links, Menü rechts
    ============================== */
 
-/* Flex-Container für Header */
 .masthead__inner-wrap {
   display: flex;
+  justify-content: space-between; /* Titel links, Menü rechts */
   align-items: center;
 }
 
-/* Titel bleibt links */
+/* Titel links, größer und fett */
 .masthead__inner-wrap .site-title {
-  flex-shrink: 0;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #111111;
+  text-decoration: none;
 }
 
-/* Navigation nach rechts schieben */
-.masthead__inner-wrap .greedy-nav {
-  margin-left: auto;
+/* Menü rechts */
+.masthead__inner-wrap nav {
   display: flex;
-  align-items: center;
 }
 
-/* Optional: Abstand zwischen Menüpunkten */
-.masthead__inner-wrap .greedy-nav .visible-links li {
-  margin-left: 1.5rem;
+.masthead__inner-wrap nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.masthead__inner-wrap nav ul li {
+  margin-left: 2rem;
+}
+
+.masthead__inner-wrap nav ul li a {
+  color: #111111;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.masthead__inner-wrap nav ul li a:hover {
+  color: #007acc;
+}
+
+/* Mobile: Hamburger-Menü immer sichtbar, links Name bleibt */
+@media (max-width: 768px) {
+  .masthead__inner-wrap {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
