@@ -3,10 +3,11 @@ title: "Contact"
 permalink: /contact/
 ---
 
-You can reach me at:
-
-**Email:** nina.wade@example.com  
-**Office:** University XYZ  
-**Address:** Street, City, Country  
+|            | |
+|------------|------------------------------------------------|
+| **Phone:** | +49 (0)30 2093 XXX                            |
+| **Email:** | [nina.wade@hu-berlin.de](mailto:nina.wade@hu-berlin.de) |
+| **Office:**| Humboldt University Berlin                     |
+| **Address:** | Hannoversche Str. 27, D-10115 Berlin          |
 
 Feel free to get in touch.
